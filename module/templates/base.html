@@ -66,7 +66,7 @@
                 </li>
                 {% else %}
                 <li class="nav-item" role="presentation">
-                    <a href="/auth/checkAuth" class="nav-link text-primary">
+                    <a href="{{ url_for('auth.checkAuth') }}" class="nav-link text-primary">
                         Login
                     </a>
                 </li>
@@ -99,14 +99,14 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="team-tab-pane" role="tabpanel" aria-labelledby="team-tab" tabindex="1">
-                {% include 'team.html' ignore missing %}
+                {% include 'team.html' %}
             </div>
             <div class="tab-pane fade" id="aboutUs-tab-pane" role="tabpanel" aria-labelledby="aboutUs-tab" tabindex="2">
-                {% include 'about.html' ignore missing %}
+                {% include 'about.html' %}
             </div>
             <div class="tab-pane fade" id="contactUs-tab-pane" role="tabpanel" aria-labelledby="contactUs-tab"
                 tabindex="3">
-                {% include 'contact.html' ignore missing %}
+                {% include 'contact.html' %}
             </div>
         </div>
     </div>

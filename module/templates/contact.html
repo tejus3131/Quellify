@@ -1,0 +1,27 @@
+<div class="container d-flex">
+    <div class="container d-flex">
+        <div class="container mx-3 my-auto w-50">
+            <h1 class="text-center fs-1 my-3">Contact Us</h1>
+            <p class="text-center fs-5 my-3">
+                We are here to help and answer any question you might have as soon as possible.
+            </p>
+            {% if user %}
+            <form action="{{ url_for('views.contactUs') }}" method="post" class="my-3">
+                <div class="form-floating my-3">
+                    <textarea class="form-control" name="query" placeholder="Leave a comment here"
+                        id="floatingTextarea2" style="height: 300px"></textarea>
+                    <label for="floatingTextarea2">Enter your query</label>
+                </div>
+                <button type="submit" class="btn btn-primary my-3 w-100">Proceed</button>
+            </form>
+            {% else %}
+            <p class="text-center">
+                <a href="{{ url_for('auth.checkAuth') }}" class="fs-5 my-3">
+                    Login to contact us
+                </a>
+            </p>
+            {% endif %}
+        </div>
+        <img src="{{ url_for('static', filename='/images/contact.jpeg') }}" class="rounded-5 w-50" />
+    </div>
+</div>

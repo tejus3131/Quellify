@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}Smart Way To Learn And Grow{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <div class="container border-1">
+        <h1 class="text-center">
+            My Courses
+        </h1>
+        <br>
+        {% if user_course | length == 0 %}
+        <h2 class="text-center">
+            No course added yet!
+        </h2>
+        {% else %}
+        {% for courses in user_course %}
+        <div class="card m-4" data-aos="fade-right">
+            <div class="card-header">
+                {{courses['course_name']}}
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{courses['course_description']}}</p>
+                <div class="d-flex w-100 justify-content-evenly">
+                    <a href="/view_course/{{ courses['course_code'] }}" class="btn btn-outline-primary">View
+                        Course</a>
+                    <a href="/remove_course/{{ courses['course_code'] }}" class="btn btn-outline-danger">Remove
+                        Course</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr class="border border-secondary">
+    <br>
+    <br>
+    <br>
+    <div class="container border-1">
+        {% if all_course | length != 0 %}
+    <h1 class="mx-auto text-center">
+        Available Courses
+    </h1>
+    {% endif %}
+    {% if all_course | length == 0 %}
+    <h2 class="mx-auto text-center ">No available courses!</h2>
+    <h2 class="mx-auto text-center ">You are registered to all available the courses.</h2>
+    {% else %}
+    <div class="container mt-5 d-flex flex-wrap">
+        {% for item in all_course %}
+        <div class="card m-4 mx-auto" data-aos="fade-up" style="width: 22rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ item['course_name'] }}</h5>
+                <p class="card-text overflow-auto" style="height: 150px;">{{ item['course_description'] }}
+                </p>
+                <a href="/register_course/{{ item['course_code'] }}" class="btn w-100 btn-outline-primary">Register
+                    Course</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -46,25 +46,25 @@ def website():
     app.register_blueprint(auth, url_prefix='/auth')
     app.register_blueprint(admin, url_prefix='/admin')
 
-    @app.errorhandler(404)
-    def not_found(e):
-        return render_template("404.html")
+    # @app.errorhandler(404)
+    # def not_found(e):
+    #     return render_template("404.html")
 
-    @app.errorhandler(500)
-    def internal_error(e):
-        return render_template("500.html")
+    # @app.errorhandler(500)
+    # def internal_error(e):
+    #     return render_template("500.html")
 
-    @app.errorhandler(403)
-    def forbidden(e):
-        return redirect(url_for('views.home'))
+    # @app.errorhandler(403)
+    # def forbidden(e):
+    #     return redirect(url_for('views.home'))
 
-    @app.errorhandler(410)
-    def gone(e):
-        return redirect(url_for('views.home'))
+    # @app.errorhandler(410)
+    # def gone(e):
+    #     return redirect(url_for('views.home'))
 
-    @app.errorhandler(400)
-    def bad_request(e):
-        return redirect(url_for('views.home'))
+    # @app.errorhandler(400)
+    # def bad_request(e):
+    #     return redirect(url_for('views.home'))
 
     create_admin()
 

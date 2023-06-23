@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quellify - Smart Way To Learn And Grow</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='/images/quellify.ico') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='design.scss') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "hletrm6fb0");
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LT18PDV4J7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LT18PDV4J7');
+    </script>
+</head>
+<body>
+    <div class="container d-flex flex-column">
+        <nav class="navbar mt-4">
+            <a class="navbar-brand d-flex" href="{{ url_for('views.home')}}">
+                <img src="{{ url_for('static', filename='/images/logo.png')}}" alt="Logo" width="50" height="50"
+                    class="d-inline-block align-text-top">
+                <h1 class="navbar-brand m-1 fs-3 fw-light pacifico">Quellify</h1>
+            </a>
+        </nav>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    {% if category =='error' %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{url_for('static',filename='index.js')}}"></script>
+</body>
+
+</html>
