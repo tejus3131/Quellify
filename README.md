@@ -1,6 +1,6 @@
 # Quellify - Smart Way To Learn And Grow
 
-![Quellify](module/static/images/logo.png)
+![Quellify](module/static/images/favicon.ico)
 
 Quellify is a comprehensive online platform designed to empower students in their career exploration journey. It addresses the common challenges students face when seeking guidance and support in their career choices, such as limited access to helpful information and inadequate knowledge in their desired fields. By providing a wealth of resources, guidance, and up-to-date information, Quellify aims to help students create a clear roadmap for their future and discover a direct path towards their desired career.
 
