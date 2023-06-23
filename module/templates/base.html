@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quellify - {% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='/images/quellify.ico') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "hletrm6fb0");
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LT18PDV4J7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LT18PDV4J7');
+    </script>
+</head>
+
+<body>
+    <div class="container d-flex flex-column">
+        <nav class="navbar mt-4">
+            <a class="navbar-brand d-flex" href="{{ url_for('views.home')}}">
+                <img src="{{ url_for('static', filename='/images/logo.png')}}" alt="Logo" width="50" height="50"
+                    class="d-inline-block align-text-top">
+                <h1 class="navbar-brand m-1 fs-3 fw-light pacifico">Quellify</h1>
+            </a>
+            <ul class="nav-underline nav" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active text-dark" id="home-tab" data-bs-toggle="tab"
+                        data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                        aria-selected="true" tabindex="0">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-dark" id="team-tab" data-bs-toggle="tab"
+                        data-bs-target="#team-tab-pane" type="button" role="tab" aria-controls="team-tab-pane"
+                        aria-selected="false" tabindex="1">Team</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-dark" id="aboutUs-tab" data-bs-toggle="tab"
+                        data-bs-target="#aboutUs-tab-pane" type="button" role="tab" aria-controls="aboutUs-tab-pane"
+                        aria-selected="false" tabindex="2">About</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-dark" id="contactUs-tab" data-bs-toggle="tab"
+                        data-bs-target="#contactUs-tab-pane" type="button" role="tab" aria-controls="contactUs-tab-pane"
+                        aria-selected="false" tabindex="3">Contact</button>
+                </li>
+                {% if user %}
+                <li class="nav-item" role="presentation">
+                    <a href="{{ url_for('auth.logout') }}" class="nav-link text-danger">
+                        Logout
+                    </a>
+                </li>
+                {% else %}
+                <li class="nav-item" role="presentation">
+                    <a href="/auth/checkAuth" class="nav-link text-primary">
+                        Login
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        {% if category =='error' %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <div class="container">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="team-tab-pane" role="tabpanel" aria-labelledby="team-tab" tabindex="1">
+                {% include 'team.html' ignore missing %}
+            </div>
+            <div class="tab-pane fade" id="aboutUs-tab-pane" role="tabpanel" aria-labelledby="aboutUs-tab" tabindex="2">
+                {% include 'about.html' ignore missing %}
+            </div>
+            <div class="tab-pane fade" id="contactUs-tab-pane" role="tabpanel" aria-labelledby="contactUs-tab"
+                tabindex="3">
+                {% include 'contact.html' ignore missing %}
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{url_for('static',filename='index.js')}}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

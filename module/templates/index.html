@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Smart Way To Learn And Grow{% endblock %}
+{% block content %}
+
+<div class="container d-flex">
+    <div class="w-50 mx-auto mt-5 d-flex flex-column">
+        <div class="fs-6 fw-bold my-auto">
+            <h1 class="text-primary pacifico fe-semibold mx-auto" style="font-size: 70px;">
+                Quellify</h1>
+            <h2 class="text-secondary mt-3">Smart Way To Learn And Grow</h2>
+        </div>
+        <span>
+            <div class="fs-5" style="width: 90%;">
+                Discover a learning experience that goes beyond the traditional classroom.
+                Our career paths and roadmap are
+                crafted by experienced educators to provide you with the skills and
+                knowledge that you need to thrive in today's
+                fast-paced world. From business and technology to arts and personal
+                development, our diverse roadmap catalog
+                ensures that you can explore and excel in your areas of interest.
+            </div>
+        </span>
+        <a href="/auth/checkAuth" class="btn btn-outline-primary my-auto "
+            style="width: 90%;">
+            Get Started
+        </a>
+    </div>
+    <img src="{{ url_for('static', filename='/images/index.png') }}" class="w-50 m-auto" />
+</div>
+{% endblock %}
