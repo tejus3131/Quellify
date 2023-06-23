@@ -16,7 +16,7 @@ In order to create a positive and inclusive community, we expect all participant
 
 ## Reporting Issues
 
-If you witness or experience any behavior that violates the Code of Conduct, we encourage you to report it by contacting the project maintainers at [maintainers@quellify.com]. All reports will be handled with confidentiality and will be promptly addressed by the project team.
+If you witness or experience any behavior that violates the Code of Conduct, we encourage you to report it by contacting the project maintainers at [tejus3131@gmail.com]. All reports will be handled with confidentiality and will be promptly addressed by the project team.
 
 ## Enforcement
 

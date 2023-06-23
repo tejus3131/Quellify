@@ -37,7 +37,7 @@ If you encounter any issues while using Quellify or have suggestions for improve
 
 ## Feedback and Discussions
 
-We value your feedback and encourage you to participate in discussions related to Quellify. You can engage with the community and the project maintainers through the [Discussions](https://github.com/tejus3131/quellify/discussions) section.
+We value your feedback and encourage you to participate in discussions related to Quellify. You can engage with the community and the project maintainers through the [Query](https://quellify.vercel.app/) section.
 
 ## License
 
