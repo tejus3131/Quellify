@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ course['course_name'] }}
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="container mt-3 d-flex flex-column w-100">
+        <h1 class="mx-auto mt-3">
+            {{ course['course_name'] }}
+        </h1>
+        <p class="mb-5">
+            {{ course['course_step'] | safe }}
+        </p>
+    </div>
+</div>
+{% endblock %}

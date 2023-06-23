@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="/admin/edit_course/{{ code }}" method="post">
+    <div class="form-floating my-3">
+        <input class="form-control" name="name" placeholder="Enter Course Name" id="name" value="{{ name }}">
+        <label for="name">Enter Course Name</label>
+    </div>
+    <div class="form-floating my-3">
+        <textarea class="form-control" name="desc" placeholder="Enter Course Description" id="desc"
+            style="height: 300px">{{ desc }}</textarea>
+        <label for="desc">Enter Course Description</label>
+    </div>
+    <div class="form-floating my-3">
+        <textarea class="form-control" name="step" placeholder="Enter Course Steps" id="step"
+            style="height: 300px">{{ step }}</textarea>
+        <label for="step">Enter Course Steps</label>
+    </div>    
+    <button id="courseButton" type="submit" class="btn btn-outline-primary my-3 w-100">Proceed</button>
+</form>
+{% endblock %}

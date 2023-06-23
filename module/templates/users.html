@@ -1,0 +1,54 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Email</th>
+            <th scope="col">Courses</th>
+            <th scope="col">Authority</th>
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in user_data %}
+        <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{user['email']}}</td>
+            <td>{{user['courses']|length}}</td>
+            <td>
+                {% if user['admin'] %}
+                <li class="nav-link" role="presentation">
+                    {% if master == user['email'] %}
+                    <a class="btn w-50 btn-secondary">
+                        Master
+                    </a>
+                    {% else %}
+                    <a href="/admin/remove_admin/{{user['email']}}" class="btn w-50 btn-outline-danger">
+                        Remove Admin
+                    </a>
+                    {% endif %}
+                </li>
+                {% else %}
+                <li class="nav-link" role="presentation">
+                    <a href="/admin/add_admin/{{user['email']}}" class="btn w-50 btn-outline-success">
+                        Add Admin
+                    </a>
+                </li>
+                {% endif %}
+            </td>
+            <td>
+                <li class="nav-link" role="presentation">
+                    {% if master == user['email'] %}
+                    <a class="btn w-50 btn-secondary">
+                        Master
+                    </a>
+                    {% else %}
+                    <a href="/admin/delete_user/{{user['email']}}" class="btn w-50 btn-outline-danger">
+                        Delete
+                    </a>
+                    {% endif %}
+                </li>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

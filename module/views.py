@@ -1,6 +1,7 @@
-from flask import Blueprint, render_template, url_for, redirect, session, flash, request
-from module import courses, users, unique_identifier, queries
+from flask import Blueprint, redirect, render_template, flash, url_for, session, request
+from . import queries, unique_identifier, courses, users
 from .auth import login_required
+
 views = Blueprint('views', __name__)
 
 
@@ -21,6 +22,7 @@ def home():
                 all_course.append(item)
         return render_template('home.html', user=True, all_course=all_course, user_course=user_course)
     return render_template('index.html', user=False)
+
 
 @views.route('/contactUs', methods=['POST'])
 @login_required
