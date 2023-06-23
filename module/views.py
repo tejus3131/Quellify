@@ -1,5 +1,5 @@
-from flask import Blueprint, render_template, url_for, redirect, session
-from module import courses, users, unique_identifier
+from flask import Blueprint, render_template, url_for, redirect, session, flash, request
+from module import courses, users, unique_identifier, queries
 from .auth import login_required
 views = Blueprint('views', __name__)
 
