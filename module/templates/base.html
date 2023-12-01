@@ -12,65 +12,48 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "hletrm6fb0");
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LT18PDV4J7"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-LT18PDV4J7');
-    </script>
 </head>
 
 <body>
     <div class="container d-flex flex-column">
         <nav class="navbar mt-4">
-            <a class="navbar-brand d-flex" href="{{ url_for('views.home')}}">
+            <a class="navbar-brand d-flex hover" href="{{ url_for('views.home')}}">
                 <img src="{{ url_for('static', filename='/images/logo.png')}}" alt="Logo" width="50" height="50"
-                    class="d-inline-block align-text-top">
-                <h1 class="navbar-brand m-1 fs-3 fw-light pacifico">Quellify</h1>
+                    class="d-inline-block align-text-top rotate hover">
+                <h1 class="navbar-brand m-1 fs-3 fw-light pacifico hover">Quellify</h1>
             </a>
             <ul class="nav-underline nav" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active text-dark" id="home-tab" data-bs-toggle="tab"
+                    <button class="nav-link active text-dark hover" id="home-tab" data-bs-toggle="tab"
                         data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
                         aria-selected="true" tabindex="0">Home</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link text-dark" id="team-tab" data-bs-toggle="tab"
+                    <button class="nav-link text-dark hover" id="team-tab" data-bs-toggle="tab"
                         data-bs-target="#team-tab-pane" type="button" role="tab" aria-controls="team-tab-pane"
                         aria-selected="false" tabindex="1">Team</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link text-dark" id="aboutUs-tab" data-bs-toggle="tab"
+                    <button class="nav-link text-dark hover" id="aboutUs-tab" data-bs-toggle="tab"
                         data-bs-target="#aboutUs-tab-pane" type="button" role="tab" aria-controls="aboutUs-tab-pane"
                         aria-selected="false" tabindex="2">About</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link text-dark" id="contactUs-tab" data-bs-toggle="tab"
+                    <button class="nav-link text-dark hover" id="contactUs-tab" data-bs-toggle="tab"
                         data-bs-target="#contactUs-tab-pane" type="button" role="tab" aria-controls="contactUs-tab-pane"
                         aria-selected="false" tabindex="3">Contact</button>
                 </li>
                 {% if user %}
                 <li class="nav-item" role="presentation">
-                    <a href="{{ url_for('auth.logout') }}" class="nav-link text-danger">
+                    <a href="{{ url_for('auth.logout') }}" class="nav-link text-danger hover">
                         Logout
                     </a>
-                </li>
-                {% else %}
-                <li class="nav-item" role="presentation">
-                    <a href="{{ url_for('auth.checkAuth') }}" class="nav-link text-primary">
+                    {% else %}
+                    <a href="{{ url_for('auth.checkAuth') }}" class="nav-link text-primary hover">
                         Login
                     </a>
+                    {% endif %}
                 </li>
-                {% endif %}
             </ul>
         </nav>
         {% with messages = get_flashed_messages(with_categories=true) %}

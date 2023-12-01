@@ -1,46 +1,35 @@
-<div class="mt-5 container d-flex">
-    <div class="container my-auto" style="width: 35%;">
-        <h1 class="fw-bold" style="font-size: 80px; width: 90%;">
-            Meet The Team
-        </h1>
-        <p class="fs-5">
-            We are a team of passionate people whose goal is to improve everyone's life
-            through
-            disruptive products. We
-            build great products to solve your business problems.
-        </p>
-    </div>
-    <div class="container d-flex " style="width: 65%;">
-        <div class="card mx-auto mt-3 container shadow-lg" style="width: 45%;">
-            <img src="{{ url_for('static', filename='/images/tejus.jpg') }}"
-                class="mx-auto w-75 rounded-circle m-3">
-            <div class="card-body container d-flex flex-column">
-                <h1 class="mx-auto fs-2">
-                    Tejus Gupta
-                </h1>
-                <p class="mx-auto fs-5 text-primary">
-                    Technical Lead
-                </p>
-                <a href="https://tejus3131.github.io/" class="btn btn-outline-primary" target="_blank">
-                    View Member
-                </a>
+<section id="team_section">
+    <div class="team">
+        <h1>Our<span>Team</span></h1>
+        <div class="team_box">
+            <div class="profile">
+                <img class="hover" src="{{ url_for('static', filename='images/abhishek.png' ) }}" alt="team">
+                <div class="info">
+                    <h2 class="name">Abhishek Panwar</h2>
+                    <p class="bio">Frontend Developer</p>
+                </div>
             </div>
-        </div>
-        <div class="card mx-auto mt-3 container shadow" style="width: 45%;">
-            <img src="{{ url_for('static', filename='/images/abhishek.png') }}"
-                class="mx-auto w-75 rounded-circle m-3">
-            <div class="card-body container d-flex flex-column">
-                <h1 class="mx-auto fs-2">
-                    Abhishek Panwar
-                </h1>
-                <p class="mx-auto fs-5 text-primary">
-                    Creative Lead
-                </p>
-                <a href="https://abhishek2001panwar.github.io/" class="btn btn-outline-primary"
-                    target="_blank">
-                    View Member
-                </a>
+            <div class="profile">
+                <img class="hover" src="{{ url_for('static', filename='images/tejus.jpg' ) }}" alt="team">
+                <div class="info">
+                    <h2 class="name">Tejus Gupta</h2>
+                    <p class="bio">Backend Developer</p>
+                </div>
+            </div>
+            <div class="profile">
+                <img class="hover" src="{{ url_for('static', filename='images/nirdesh.jpg' ) }}" alt="team">
+                <div class="info">
+                    <h2 class="name">Nirdesh Sharma</h2>
+                    <p class="bio">Graphics Designer</p>
+                </div>
+            </div>
+            <div class="profile">
+                <img class="hover" src="{{ url_for('static', filename='images/dhruv.jpg' ) }}" alt="team">
+                <div class="info">
+                    <h2 class="name">Dhruv Gupta</h2>
+                    <p class="bio">Content Manager</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>

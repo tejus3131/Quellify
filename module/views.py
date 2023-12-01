@@ -13,8 +13,8 @@ def home():
         course = courses.find({})
         user = users.find_one({unique_identifier: session[unique_identifier]})
         user_code = user['courses']
-        all_course=[]
-        user_course=[]
+        all_course = []
+        user_course = []
         for item in course:
             if item['course_code'] in user_code:
                 user_course.append(item)
@@ -57,6 +57,7 @@ def removeCourse(code):
     users.update_one({unique_identifier: session[unique_identifier]}, {
                      '$set': {'courses': courses}})
     return redirect(url_for('views.home'))
+
 
 @views.route('/view_course/<string:code>', methods=['GET'])
 @login_required

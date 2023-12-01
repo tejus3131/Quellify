@@ -1,0 +1,175 @@
+Synopsis
+On
+Quellify: A Career Pathfinder Platform
+
+Submitted in partial fulfillment of the requirement
+For the award of the degree of
+B.TECH
+In
+Computer Science & Engineering
+Specialization: Artificial Intelligence & Machine Learning
+
+Submitted By
+- Tejus Gupta (Roll. No.)
+- Abhishek Panwar (Roll. No.)
+- Nirdesh Sharma (Roll. No.)
+- Dhruv Gupta (Roll. No.)
+
+2023-2024
+3rd Semester
+Department of Computer Science & Engineering
+Specialization in Artificial Intelligence & Machine Learning
+Meerut Institute of Engineering & Technology, Meerut
+
+
+
+
+
+
+
+Abstract
+
+Quellify is a pioneering Career Pathfinder Platform developed by a dynamic team of Computer Science and Engineering students at Meerut Institute of Engineering & Technology. This platform aims to address the challenges students face in exploring diverse career options. With a focus on Artificial Intelligence and Machine Learning, Quellify provides an interactive space for students to discover courses, engage with mentors, and participate in assessments.
+
+This synopsis provides an overview of the project's objectives, methodology, and key features. It highlights the collaborative effort of the team members, each contributing their expertise to create a user-centric and technologically advanced educational platform.
+
+Keywords: Career Exploration, Artificial Intelligence, Machine Learning, Educational Platform, Mentorship, Quellify.
+
+
+
+
+
+Problem Statement
+
+The traditional approach to career exploration lacks a comprehensive and interactive platform that guides students through diverse career options. Many students struggle to find relevant courses and mentors tailored to their interests, leading to uninformed career decisions. The absence of an integrated solution hampers the learning journey and inhibits effective mentor-student collaboration.
+
+The Quellify project addresses these challenges by developing a user-friendly platform that seamlessly integrates course exploration, mentorship, and assessments, providing a holistic solution to the problems faced by students in their career exploration endeavors.
+
+
+
+
+
+
+Objectives and Scope
+
+Objectives:
+1. Create a user-centric Career Pathfinder Platform.
+2. Provide three user roles: Admin, Mentor, and Student.
+3. Offer foundational courses on programming languages, Git basics, and open source.
+4. Implement an interactive query system for student-mentor interaction.
+
+Scope:
+- Develop a scalable backend architecture.
+- Create a responsive and visually appealing frontend.
+- Offer courses covering programming languages, Git basics, and open source.
+- Facilitate effective mentor-student collaboration through an interactive query system.
+- Enhance the platform's usability and user experience.
+
+This section delineates the specific goals your team aims to achieve and the boundaries within which the project will operate.
+
+
+
+
+
+
+Methodology
+
+The development of Quellify follows an agile methodology, emphasizing iterative progress and adaptability. The team collaboratively employs the following steps:
+
+1. Backend Development:
+   - Tejus Gupta focuses on creating a scalable backend architecture using Flask and MongoDB for efficient data management.
+
+2. Frontend Development:
+   - Abhishek Panwar ensures a responsive and engaging frontend, utilizing Bootstrap, Font Awesome, and AOS for visual appeal and interactivity.
+
+3. Designing:
+   - Nirdesh Sharma maintains consistent branding and visual appeal throughout the platform, contributing to an overall positive user experience.
+
+4. Content Creation:
+   - Dhruv Gupta generates clear and concise content to guide users and enhance the learning experience.
+
+This collaborative and iterative approach ensures a cohesive and well-rounded development process, aligning with the dynamic nature of the project.
+
+
+
+
+
+
+Process Description and Architecture
+
+The development process of Quellify involves the following key steps:
+
+1. Backend Architecture:
+   - Tejus Gupta designs a scalable backend architecture using Flask and MongoDB, ensuring efficient data management and retrieval.
+
+2. Frontend Design:
+   - Abhishek Panwar focuses on creating a responsive and visually appealing frontend using Bootstrap, Font Awesome, and AOS for animations.
+
+3. Design Consistency:
+   - Nirdesh Sharma ensures consistent branding and visual appeal throughout the platform, contributing to a seamless and engaging user experience.
+
+4. Content Integration:
+   - Dhruv Gupta integrates clear and concise content within the platform to guide users through the learning process.
+
+The general architecture of Quellify includes a scalable backend, a responsive frontend, and visually appealing design elements, ensuring a user-friendly and dynamic educational platform.
+
+
+
+
+Hardware & Software Used
+
+Backend:
+- Flask for server-side development.
+- MongoDB for efficient data management and storage.
+
+Frontend:
+- Bootstrap for responsive design.
+- Font Awesome for icons.
+- AOS for animations.
+
+Tools:
+- Git for version control.
+- Docker for containerization.
+
+This section provides an overview of the hardware and software components utilized in the development of Quellify, ensuring transparency and clarity about the technological stack.
+
+
+
+
+
+
+
+References / Bibliography
+
+>	Pallets Projects
+o	Flask Documentation. Retrieved from https://flask.palletsprojects.com/ 
+
+>	MongoDB
+o	MongoDB Documentation. Retrieved from https://docs.mongodb.com/ 
+
+>	Bootstrap
+o	 Bootstrap Documentation. Retrieved from https://getbootstrap.com/ 
+
+>	Font Awesome
+o	 Font Awesome Documentation. Retrieved from https://fontawesome.com/ 
+
+>	AOS - Animate on Scroll Library
+o	Animation Library. Retrieved from https://michalsnik.github.io/aos/ 
+
+
+
+
+
+
+
+Future Enhancements
+
+Quellify is designed with a forward-looking perspective. Future enhancements include:
+
+1. UI/UX Improvements:
+   - Continual refinement of the website's user interface and user experience for a seamless learning journey.
+
+2. MCQ-Based Tests:
+   - Implementation of MCQ-based assessments to evaluate student understanding and provide interactive learning opportunities.
+
+These enhancements aim to further elevate Quellify, ensuring its relevance, engagement, and effectiveness in supporting students in their educational journey.

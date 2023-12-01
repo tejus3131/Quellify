@@ -1,6 +1,7 @@
 from flask import Blueprint, session, url_for, redirect, render_template, flash, request, jsonify
 from . import users, unique_identifier, admins
 from werkzeug.security import generate_password_hash, check_password_hash
+import requests
 
 auth = Blueprint('auth', __name__)
 
@@ -100,9 +101,9 @@ def register():
     session[unique_identifier] = email
     session['admin'] = admin
     return jsonify({'message': 'success'})
+
+
 @auth.route('/logout')
-
-
 @login_required
 def logout():
     session.clear()

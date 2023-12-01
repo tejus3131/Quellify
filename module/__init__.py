@@ -1,9 +1,8 @@
-from flask import Flask, Blueprint, redirect, render_template, url_for
+from flask import Flask, redirect, render_template, url_for
 from werkzeug.security import generate_password_hash
 from pymongo import MongoClient
 import random
 import string
-import os
 
 admins = []
 unique_identifier = "email"
